@@ -1,0 +1,15 @@
+{
+  "migrationsTableName": "migrations",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "groyyo123",
+  "database": "buggy",
+  "logging": false,
+  "synchronize": false,
+  "name": "default",
+  "entities": ["src/**/**.entity{.ts,.js}"],
+  "migrations": ["src/migrations/**/*{.ts,.js}"],
+  "subscribers": ["src/subscriber/**/*{.ts,.js}"]
+}
