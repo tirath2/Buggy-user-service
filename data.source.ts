@@ -1,5 +1,5 @@
-import { Organization } from 'src/Entity/organization.entity';
 import { Project } from 'src/Entity/project.entity';
+import { Role } from 'src/Entity/role.entity';
 import { UserProject } from 'src/Entity/user-project.entity';
 import { User } from 'src/Entity/user.entity';
 import { DataSource, DataSourceOptions } from 'typeorm';
@@ -11,10 +11,10 @@ export const dbdatasource: DataSourceOptions = {
   username: 'postgres',
   password: 'groyyo123',
   database: 'buggy',
-  logging: false,
+  logging: true,
   synchronize: false,
   name: 'default',
-  entities: [User, Organization, Project, UserProject],
+  entities: [User, Project, UserProject, Role],
   migrations: ['src/migrations/**/*{.ts,.js}'],
   subscribers: ['src/subscriber/**/*{.ts,.js}'],
 };

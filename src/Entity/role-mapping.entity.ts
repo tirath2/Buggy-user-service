@@ -3,7 +3,7 @@
 import { Column, Entity } from 'typeorm';
 import { BaseEntity } from './base';
 
-@Entity('user_project')
+@Entity('role_mapping')
 export class UserProject extends BaseEntity {
   @Column({ type: 'integer', nullable: false, name: 'user_id' })
   userId: number;
@@ -11,6 +11,12 @@ export class UserProject extends BaseEntity {
   @Column({ type: 'integer', nullable: false, name: 'project_id' })
   projectId: number;
 
-  @Column({ type: 'integer', nullable: false, name: 'role_id' })
+  @Column({ type: 'integer', name: 'role_id' })
   roleId: number;
+
+  @Column({ type: 'integer', nullable: false, name: 'report_to_user_id' })
+  reportToUserId: number;
+
+  @Column({ type: 'integer', nullable: false, name: 'report_to_role_id' })
+  reportToRoleId: number;
 }
